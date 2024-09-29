@@ -6,11 +6,11 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:39:00 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/29 17:46:59 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/29 22:21:10 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/so_long.h"
+#include "../inc/so_long.h"
 
 void	cleanup_player(t_so_long *so_long)
 {
