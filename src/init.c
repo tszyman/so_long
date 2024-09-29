@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:36:39 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/29 21:57:49 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/29 22:17:28 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,28 @@ int	init_window(t_so_long *so_long)
 	return (1);
 }
 
-// int	init_map(t_so_long *so_long, int argc), char *argv[])
-// {
-// 	if (argc != 2)
-// 	{
-// 		error_msg(1);
-// 		return (0);
-// 	}
-// 	return (1);
-// }
+int	init_map(t_so_long *so_long, int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		error_msg(1);
+		return (0);
+	}
+	return (1);
+	if (!check_path(argv[1], so_long))
+	{
+		error_msg(2);
+		return (0);
+	}
+	if (!fill_map(so_long))
+	{
+		error_msg(3);
+		return (0);
+	}
+	if (!check_map(so_long))
+	{
+		error_msg(4);
+		return(0);
+	}
+	return (1);
+}
