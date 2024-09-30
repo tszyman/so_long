@@ -6,11 +6,11 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:11:16 by tomek             #+#    #+#             */
-/*   Updated: 2024/03/14 20:37:45 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/30 23:22:15 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../inc/libft.h"
 
 char	*ft_strdup(const char *s);
 

@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 22:20:32 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/30 21:54:08 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/30 23:07:21 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	check_path(char *path, t_so_long *so_long)
 	path_len = ft_strlen(path);
 	if (path_len < 4)
 		return (0);
-	if (ft_strcmp(&path[path_len - 4], ".ber") != 0)
+	if (ft_strncmp(&path[path_len - 4], ".ber", 4) != 0)
 		return (0);
 	so_long->map_path = ft_strdup(path);
 	return(1);
