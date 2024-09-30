@@ -6,11 +6,26 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:36:39 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/29 22:17:28 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/30 22:44:17 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
+
+static int	check_map(t_so_long *so_long)
+{
+	if (!wall_check)
+		return (0);
+	if (!item_check)
+		return (0);
+	if (!exit_check)
+		return (0);
+	if (!player_check)
+		return (0);
+	if (!validate_map)
+		return (0);
+	return (1);
+}
 
 int	init_so_long_struct(t_so_long *so_long)
 {
@@ -21,9 +36,9 @@ int	init_so_long_struct(t_so_long *so_long)
 	so_long->w = 100;
 	so_long->h = 100;
 	so_long->map_fd = 0;
-	so_long->collect_total = 0;
+	so_long->items_total = 0;
 	so_long->game_over = 0;
-	so_long->collect_count = 0;
+	so_long->item_count = 0;
 	so_long->exit_found = 0;
 	so_long->map_path = NULL;
 	so_long->map = NULL;
