@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:36:39 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/30 22:44:17 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/30 23:01:33 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 static int	check_map(t_so_long *so_long)
 {
-	if (!wall_check)
+	if (!wall_check(so_long))
 		return (0);
-	if (!item_check)
+	if (!item_check(so_long))
 		return (0);
-	if (!exit_check)
+	if (!exit_check(so_long))
 		return (0);
-	if (!player_check)
+	if (!player_check(so_long))
 		return (0);
-	if (!validate_map)
+	if (!validate_map(so_long))
 		return (0);
 	return (1);
 }
