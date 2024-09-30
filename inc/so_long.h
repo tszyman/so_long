@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:46:38 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/29 22:37:16 by tomek            ###   ########.fr       */
+/*   Updated: 2024/09/30 22:54:46 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 # include "../libft/inc/libft.h"
 # include "../libft/inc/ft_printf.h"
+# include "../libft/inc/get_next_line.h"
 # include "../minilibx-linux/mlx.h"
 
 # define WINDOW_TITLE "so_long"
@@ -42,9 +43,9 @@ typedef struct s_so_long
 	int			w;
 	int			h;
 	int			map_fd;
-	int			collect_total;
+	int			items_total;
 	int			game_over;
-	int			collect_count;
+	int			item_count;
 	int			exit_found;
 	char		*map_path;
 	char		**map;
@@ -57,12 +58,21 @@ typedef struct s_so_long
 int		init_so_long_struct(t_so_long *so_long);
 int		init_window(t_so_long *so_long);
 int		init_map(t_so_long *so_long, int argc, char *argv[]);
+//int		check_map(t_so_long *so_long);
 
 //Map initialization
 int		check_path(char *path, t_so_long *so_long);
-int		get_map(t_so_long *so_long);
+//int		open_map(t_so_long *so_long, int line_count);
+int		fill_map(t_so_long *so_long);
 
-//Checks
+//Map validation
+int		validate_map(t_so_long *so_long);
+
+//Map checks
+int		wall_check(t_so_long *so_long);
+int		item_check(t_so_long *so_long);
+int		exit_check(t_so_long *so_long);
+int		player_check(t_so_long *so_long);
 
 //Error handling
 void	error_msg(int error_nbr);
@@ -71,10 +81,14 @@ void	error_msg(int error_nbr);
 
 //Map validation
 
+//Utils
+int		count_lines(t_so_long *so_long);
+
 
 //Cleanup
 void	cleanup_player(t_so_long *so_long);
 void	cleanup_display(t_so_long *so_long);
+void	cleanup_map(t_so_long *so_long);
 void	cleanup_all(t_so_long *so_long);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: tomek <tomek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 19:26:22 by tomek             #+#    #+#              #
-#    Updated: 2024/09/29 22:00:50 by tomek            ###   ########.fr        #
+#    Updated: 2024/09/30 22:57:37 by tomek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,14 @@ LIBFT_DIR	=	./libft
 LIBFT		=	$(LIBFT_DIR)/libft.a
 MLX_DIR		=	./minilibx-linux
 MLX_LIB		=	$(MLX_DIR)/libmlx.a
-SRCS		=	src/main.c src/init.c src/cleanup.c src/errors.c
+SRCS		=	src/main.c \
+				src/init.c \
+				src/init_map.c \
+				src/cleanup.c \
+				src/errors.c \
+				src/utils.c \
+				src/map_checks.c \
+				src/validate_map.c
 OBJS		=	$(SRCS:.c=.o)
 BONUS_OBJS	=	$(BONUS_SRCS:.c=.o)
 LDFLAGS		=	-L$(MLX_DIR) -lmlx -L/usr/lib -lXext -lX11 -lm -lz
