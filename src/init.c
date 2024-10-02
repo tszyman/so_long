@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:36:39 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/30 23:01:33 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/02 21:23:43 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	init_so_long_struct(t_so_long *so_long)
 	if (!so_long)
 		return (0);
 	so_long->win = NULL;
-	so_long->w = 100;
-	so_long->h = 100;
+	so_long->w = -1;
+	so_long->h = -1;
 	so_long->map_fd = 0;
 	so_long->items_total = 0;
 	so_long->game_over = 0;
@@ -74,7 +74,6 @@ int	init_map(t_so_long *so_long, int argc, char *argv[])
 		error_msg(1);
 		return (0);
 	}
-	return (1);
 	if (!check_path(argv[1], so_long))
 	{
 		error_msg(2);
