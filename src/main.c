@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:17:55 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/29 19:11:28 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/02 20:59:02 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 
-static int	initialize_game(t_so_long *so_long)//, int argc, char *argv[])
+static int	initialize_game(t_so_long *so_long, int argc, char *argv[])
 {
 	if (!init_so_long_struct(so_long))
 		return (0);
 	//init map
-	// if (!init_map(so_long, argc, argv))
-	// 	{
-	// 		cleanup_player(so_long);
-	// 		cleanup_display(so_long);
-	// 		return (0);
-	// 	}
+	if (!init_map(so_long, argc, argv))
+		{
+			cleanup_player(so_long);
+			cleanup_display(so_long);
+			return (0);
+		}
 	//init window
 	if (!init_window(so_long))
 	{
-		//cleanup_map(so_long);
+		cleanup_map(so_long);
 		cleanup_player(so_long);
 		cleanup_display(so_long);
 		return (0);
@@ -38,7 +38,7 @@ int	main(int argc, char *argv[])
 {
 	t_so_long	so_long;
 	
-	if (!initialize_game(&so_long))//, argc, argv))
+	if (!initialize_game(&so_long, argc, argv))
 		exit (EXIT_FAILURE);
 	// if (!load_sprites(&so_long))
 	// {

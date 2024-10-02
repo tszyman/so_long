@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:46:38 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/30 23:18:58 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/02 20:58:19 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,11 @@ typedef struct s_so_long
 int		init_so_long_struct(t_so_long *so_long);
 int		init_window(t_so_long *so_long);
 int		init_map(t_so_long *so_long, int argc, char *argv[]);
-//int		check_map(t_so_long *so_long);
+//static int		check_map(t_so_long *so_long);
 
 //Map initialization
 int		check_path(char *path, t_so_long *so_long);
-//int		open_map(t_so_long *so_long, int line_count);
+//static int		open_map(t_so_long *so_long, int line_count);
 int		fill_map(t_so_long *so_long);
 
 //Map validation
