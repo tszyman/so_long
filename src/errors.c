@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:53:44 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/02 21:27:43 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/05 15:58:44 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,10 @@ void	error_msg(int error_nbr)
 	{
 		ft_printf("Error\n");
 		ft_printf("Something's wrong with the map itself!\n");
+	}
+	if (error_nbr == 5)
+	{
+		ft_printf("Error\n");
+		ft_printf("Something's wrong with the sprites!\n");
 	}
 }

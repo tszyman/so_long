@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:46:38 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/02 20:58:19 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/05 13:42:01 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ void	error_msg(int error_nbr);
 //Utils
 int		count_lines(t_so_long *so_long);
 
+//Sprites
+int		load_sprites(t_so_long *so_long);
 
 //Cleanup
 void	cleanup_player(t_so_long *so_long);
