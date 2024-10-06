@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:46:38 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 17:57:10 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 18:33:37 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ int		load_sprites(t_so_long *so_long);
 void	cleanup_player(t_so_long *so_long);
 void	cleanup_display(t_so_long *so_long);
 void	cleanup_map(t_so_long *so_long);
+void	cleanup_sprites(t_so_long *so_long);
 void	cleanup_all(t_so_long *so_long);
 
 #endif
