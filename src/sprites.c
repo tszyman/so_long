@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 13:39:56 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/05 16:01:49 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 11:59:33 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ static int	check_sprites_loaded(t_so_long *so_long)
 			return (0);
 		i++;
 	}
+	if (!so_long->p->idle_left || !so_long->p->idle_right)
+		return (0);
 	return (1);
 }
 

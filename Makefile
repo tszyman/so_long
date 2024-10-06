@@ -6,7 +6,7 @@
 #    By: tomek <tomek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/29 19:26:22 by tomek             #+#    #+#              #
-#    Updated: 2024/10/05 13:40:34 by tomek            ###   ########.fr        #
+#    Updated: 2024/10/06 16:35:49 by tomek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS		=	src/main.c \
 				src/utils.c \
 				src/map_checks.c \
 				src/validate_map.c \
-				src/sprites.c
+				src/sprites.c \
+				src/draw.c
 OBJS		=	$(SRCS:.c=.o)
 BONUS_OBJS	=	$(BONUS_SRCS:.c=.o)
 LDFLAGS		=	-L$(MLX_DIR) -lmlx -L/usr/lib -lXext -lX11 -lm -lz
