@@ -6,11 +6,20 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:17:55 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 17:45:46 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 18:31:23 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
+
+static int	game_loop(t_so_long *so_long)
+{
+	if (so_long->game_over)
+		return (0);
+	mlx_clear_window(so_long->mlx, so_long->win);
+	draw_all(so_long);
+	return (1);
+}
 
 static int	initialize_game(t_so_long *so_long, int argc, char *argv[])
 {
@@ -50,10 +59,8 @@ int	main(int argc, char *argv[])
 	draw(&so_long);
 	mlx_hook(so_long.win, 17, 0, close_hook, &so_long);
 	mlx_key_hook(so_long.win, keys_hook, &so_long);
-	//mlx_loop_hook(so_long.mlx, game_loop, &so_long);
-	//mlx_loop(so_long.mlx);
-	ft_printf("argc: %d\n", argc);
-	ft_printf("argv: %s\n", argv[1]);
+	mlx_loop_hook(so_long.mlx, game_loop, &so_long);
+	mlx_loop(so_long.mlx);
 	cleanup_all(&so_long);
 	exit(EXIT_SUCCESS);
 }
