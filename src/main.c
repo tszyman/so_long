@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:17:55 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 18:31:23 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 18:32:57 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int argc, char *argv[])
 		exit (EXIT_FAILURE);
 	if (!load_sprites(&so_long))
 	{
-		cleanup(&so_long);
+		cleanup_all(&so_long);
 		exit (EXIT_FAILURE); 
 	}
 	//
