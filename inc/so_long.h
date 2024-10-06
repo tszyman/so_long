@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 15:46:38 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 16:35:28 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 17:57:10 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,17 @@ int		player_check(t_so_long *so_long);
 void	error_msg(int error_nbr);
 
 //Player
+void	player_move(t_so_long *so_long, int new_x_pos, int new_y_pos);
 
 //Draw
 void	draw_all(t_so_long *so_long);
 
 //Utils
 int		count_lines(t_so_long *so_long);
+
+//Hooks
+int		close_hook(t_so_long *so_long);
+int		keys_hook(int keycode, t_so_long *so_long);
 
 //Sprites
 int		load_sprites(t_so_long *so_long);
