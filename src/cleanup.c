@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:39:00 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 18:39:17 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:43:21 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	cleanup_display(t_so_long *so_long)
 {
 	if (so_long->win)
 	{
-		mlx_destroy_window(so_long->mlx,so_long->win);
+		mlx_destroy_window(so_long->mlx, so_long->win);
 		so_long->win = NULL;
 	}
 	if (so_long->mlx)

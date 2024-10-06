@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:36:39 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/02 21:23:43 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:45:36 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,9 @@ int	init_window(t_so_long *so_long)
 
 	win_width = so_long->w * TILE_SIZE;
 	win_height = so_long->h * TILE_SIZE;
-	so_long->win = mlx_new_window(so_long->mlx, 
-									win_width, 
-									win_height, 
-									WINDOW_TITLE);
-	if(!so_long->win)
+	so_long->win = mlx_new_window(so_long->mlx, win_width,
+			win_height, WINDOW_TITLE);
+	if (!so_long->win)
 		return (0);
 	return (1);
 }
@@ -87,7 +85,7 @@ int	init_map(t_so_long *so_long, int argc, char *argv[])
 	if (!check_map(so_long))
 	{
 		error_msg(4);
-		return(0);
+		return (0);
 	}
 	return (1);
 }

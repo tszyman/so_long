@@ -6,11 +6,11 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 17:53:44 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/05 15:58:44 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:41:56 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/so_long.h"
+#include "../inc/so_long.h"
 
 void	error_msg(int error_nbr)
 {

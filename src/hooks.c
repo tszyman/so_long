@@ -6,11 +6,11 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 17:42:04 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 19:27:29 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:46:19 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/so_long.h"
+#include "../inc/so_long.h"
 
 int	close_hook(t_so_long *so_long)
 {
@@ -36,7 +36,7 @@ int	keys_hook(int keycode, t_so_long *so_long)
 	}
 	else if (keycode == 100)
 	{
-		new_x_pos +=1;
+		new_x_pos += 1;
 		so_long->p->is_facing_right = 1;
 	}
 	else if (keycode == 65307)

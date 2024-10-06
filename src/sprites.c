@@ -6,21 +6,28 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 13:39:56 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 11:59:33 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:48:00 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 
-static void load_idle_sprites(t_so_long *so_long, int *width, int * height)
+static void	load_idle_sprites(t_so_long *so_long, int *width, int *height)
 {
-	so_long->sprites[0] = mlx_xpm_file_to_image(so_long->mlx, "./sprites/wall.xpm", width, height);
-	so_long->sprites[1] = mlx_xpm_file_to_image(so_long->mlx, "./sprites/item_close.xpm", width, height);
-	so_long->sprites[2] = mlx_xpm_file_to_image(so_long->mlx, "./sprites/item_open.xpm", width, height);
-	so_long->sprites[3] = mlx_xpm_file_to_image(so_long->mlx, "./sprites/gate_close.xpm", width, height);
-	so_long->sprites[4] = mlx_xpm_file_to_image(so_long->mlx, "./sprites/gate_open.xpm", width, height);
-	so_long->p->idle_right = mlx_xpm_file_to_image(so_long->mlx, "./sprites/right.xpm", width, height);
-	so_long->p->idle_left = mlx_xpm_file_to_image(so_long->mlx, "./sprites/left.xpm", width, height);
+	so_long->sprites[0] = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/wall.xpm", width, height);
+	so_long->sprites[1] = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/item_close.xpm", width, height);
+	so_long->sprites[2] = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/item_open.xpm", width, height);
+	so_long->sprites[3] = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/gate_close.xpm", width, height);
+	so_long->sprites[4] = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/gate_open.xpm", width, height);
+	so_long->p->idle_right = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/right.xpm", width, height);
+	so_long->p->idle_left = mlx_xpm_file_to_image(so_long->mlx,
+			"./sprites/left.xpm", width, height);
 }
 
 static int	check_sprites_loaded(t_so_long *so_long)

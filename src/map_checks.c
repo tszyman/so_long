@@ -6,13 +6,13 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:28:13 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/02 21:25:09 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:42:42 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 
-int		player_check(t_so_long *so_long)
+int	player_check(t_so_long *so_long)
 {
 	int	player_count;
 	int	i;
@@ -38,7 +38,7 @@ int		player_check(t_so_long *so_long)
 	return (player_count == 1);
 }
 
-int		wall_check(t_so_long *so_long)
+int	wall_check(t_so_long *so_long)
 {
 	int	i;
 
@@ -83,7 +83,7 @@ static int	item_count(t_so_long *so_long)
 	return (item_count);
 }
 
-int		item_check(t_so_long *so_long)
+int	item_check(t_so_long *so_long)
 {
 	int	items;
 
@@ -94,7 +94,7 @@ int		item_check(t_so_long *so_long)
 	return (1);
 }
 
-int		exit_check(t_so_long *so_long)
+int	exit_check(t_so_long *so_long)
 {
 	int	exit_count;
 	int	i;

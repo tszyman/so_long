@@ -6,11 +6,11 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 16:34:32 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 19:22:30 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:57:16 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/so_long.h"
+#include "../inc/so_long.h"
 
 static void	draw_walls(t_so_long *so_long)
 {
@@ -54,6 +54,7 @@ static void	draw_items(t_so_long *so_long)
 		y++;
 	}
 }
+
 static void	draw_gate(t_so_long *so_long)
 {
 	int	y;
@@ -67,7 +68,7 @@ static void	draw_gate(t_so_long *so_long)
 		{
 			if (so_long->map[y][x] == 'E')
 			{
-				if (so_long->items_total ==0)
+				if (so_long->items_total == 0)
 					mlx_put_image_to_window(so_long->mlx, so_long->win,
 						so_long->sprites[4], x * TILE_SIZE, y * TILE_SIZE);
 				else

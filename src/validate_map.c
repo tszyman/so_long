@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:03:54 by tomek             #+#    #+#             */
-/*   Updated: 2024/09/30 22:25:23 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:56:27 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ int	validate_map(t_so_long *so_long)
 	}
 	free(so_long->map_copy);
 	so_long->map_copy = NULL;
-	return(so_long->item_count == so_long->items_total && so_long->exit_found);
+	return (so_long->item_count == so_long->items_total && so_long->exit_found);
 }

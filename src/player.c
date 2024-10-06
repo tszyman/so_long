@@ -6,15 +6,16 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 17:56:30 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 19:26:48 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:58:52 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/so_long.h"
+#include "../inc/so_long.h"
 
 static int	is_move_valid(t_so_long *so_long, int new_x_pos, int new_y_pos)
 {
-	if (new_x_pos < 0 || new_y_pos < 0 || new_x_pos >= so_long->w || new_y_pos >= so_long->h)
+	if (new_x_pos < 0 || new_y_pos < 0
+		|| new_x_pos >= so_long->w || new_y_pos >= so_long->h)
 		return (0);
 	if (new_x_pos == so_long->p->pos[0] && new_y_pos == so_long->p->pos[1])
 		return (0);
@@ -23,7 +24,7 @@ static int	is_move_valid(t_so_long *so_long, int new_x_pos, int new_y_pos)
 	return (1);
 }
 
-static void	update_player_position(t_so_long *so_long, int new_x_pos, int new_y_pos)
+static void	update_player_pos(t_so_long *so_long, int new_x_pos, int new_y_pos)
 {
 	so_long->p->pos[0] = new_x_pos;
 	so_long->p->pos[1] = new_y_pos;
@@ -62,7 +63,7 @@ void	player_move(t_so_long *so_long, int new_x_pos, int new_y_pos)
 {
 	if (!is_move_valid(so_long, new_x_pos, new_y_pos))
 		return ;
-	update_player_position(so_long, new_x_pos, new_y_pos);
+	update_player_pos(so_long, new_x_pos, new_y_pos);
 	handle_item(so_long, new_x_pos, new_y_pos);
 	handle_exit(so_long, new_x_pos, new_y_pos);
 	if (!so_long->game_over)
