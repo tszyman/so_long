@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 17:42:04 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 17:54:42 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:27:29 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	keys_hook(int keycode, t_so_long *so_long)
 		new_y_pos += 1;
 	else if (keycode == 97)
 	{
-		new_x_pos -=1;
+		new_x_pos -= 1;
 		so_long->p->is_facing_right = 0;
 	}
 	else if (keycode == 100)
