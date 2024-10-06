@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:17:55 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 18:32:57 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 18:40:20 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int argc, char *argv[])
 	}
 	//
 	// game launch
-	draw(&so_long);
+	draw_all(&so_long);
 	mlx_hook(so_long.win, 17, 0, close_hook, &so_long);
 	mlx_key_hook(so_long.win, keys_hook, &so_long);
 	mlx_loop_hook(so_long.mlx, game_loop, &so_long);

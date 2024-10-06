@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 17:56:30 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 18:27:22 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 18:40:56 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	update_player_position(t_so_long *so_long, int new_x_pos, int new_y_
 	so_long->p->pos[0] = new_x_pos;
 	so_long->p->pos[1] = new_y_pos;
 	so_long->p->moves++;
-	ft_print("Moves done: %d\n", so_long->p->moves);
+	ft_printf("Moves done: %d\n", so_long->p->moves);
 }
 
 static void	handle_item(t_so_long *so_long, int new_x_pos, int new_y_pos)
