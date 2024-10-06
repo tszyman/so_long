@@ -6,7 +6,7 @@
 /*   By: tomek <tomek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 16:34:32 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/06 16:56:38 by tomek            ###   ########.fr       */
+/*   Updated: 2024/10/06 19:22:30 by tomek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,69 +14,69 @@
 
 static void	draw_walls(t_so_long *so_long)
 {
-	int	i;
-	int	j;
+	int	y;
+	int	x;
 
-	i=0;
-	while (i < so_long->h)
+	y = 0;
+	while (y < so_long->h)
 	{
-		j = 0;
-		while (j < so_long->w)
+		x = 0;
+		while (x < so_long->w)
 		{
-			if (so_long->map[i][j] == '1')
+			if (so_long->map[y][x] == '1')
 				mlx_put_image_to_window(so_long->mlx, so_long->win,
-					so_long->sprites[0], j * TILE_SIZE, i * TILE_SIZE);
-			j++;
+					so_long->sprites[0], x * TILE_SIZE, y * TILE_SIZE);
+			x++;
 		}
-		i++;
+		y++;
 	}
 }
 
 static void	draw_items(t_so_long *so_long)
 {
-	int	i;
-	int	j;
+	int	y;
+	int	x;
 
-	i=0;
-	while (i < so_long->h)
+	y = 0;
+	while (y < so_long->h)
 	{
-		j = 0;
-		while (j < so_long->w)
+		x = 0;
+		while (x < so_long->w)
 		{
-			if (so_long->map[i][j] == 'C')
+			if (so_long->map[y][x] == 'C')
 				mlx_put_image_to_window(so_long->mlx, so_long->win,
-					so_long->sprites[1], j * TILE_SIZE, i * TILE_SIZE);
-			else if (so_long->map[i][j] == 'c')
+					so_long->sprites[1], x * TILE_SIZE, y * TILE_SIZE);
+			else if (so_long->map[y][x] == 'c')
 				mlx_put_image_to_window(so_long->mlx, so_long->win,
-					so_long->sprites[2], j * TILE_SIZE, i * TILE_SIZE);
-			j++;
+					so_long->sprites[2], x * TILE_SIZE, y * TILE_SIZE);
+			x++;
 		}
-		i++;
+		y++;
 	}
 }
 static void	draw_gate(t_so_long *so_long)
 {
-	int	i;
-	int	j;
+	int	y;
+	int	x;
 
-	i=0;
-	while (i < so_long->h)
+	y = 0;
+	while (y < so_long->h)
 	{
-		j = 0;
-		while (j < so_long->w)
+		x = 0;
+		while (x < so_long->w)
 		{
-			if (so_long->map[i][j] == 'E')
+			if (so_long->map[y][x] == 'E')
 			{
 				if (so_long->items_total ==0)
 					mlx_put_image_to_window(so_long->mlx, so_long->win,
-						so_long->sprites[4], j * TILE_SIZE, i * TILE_SIZE);
+						so_long->sprites[4], x * TILE_SIZE, y * TILE_SIZE);
 				else
 					mlx_put_image_to_window(so_long->mlx, so_long->win,
-						so_long->sprites[3], j * TILE_SIZE, i * TILE_SIZE);
+						so_long->sprites[3], x * TILE_SIZE, y * TILE_SIZE);
 			}
-			j++;
+			x++;
 		}
-		i++;
+		y++;
 	}
 }
 
