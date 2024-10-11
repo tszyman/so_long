@@ -6,7 +6,7 @@
 /*   By: tszymans <tszymans@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:28:13 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/11 15:40:52 by tszymans         ###   ########.fr       */
+/*   Updated: 2024/10/11 19:16:58 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ int	player_check(t_so_long *so_long)
 				so_long->p->pos[0] = j;
 				so_long->p->pos[1] = i;
 			}
+			if (so_long->map[i][j] != 'P' && so_long->map[i][j] != 'C'
+			 	&& so_long->map[i][j] != 'E' && so_long->map[i][j] != '1'
+			 	&& so_long->map[i][j] != '0' && so_long->map[i][j] != '\n')
+			 	return (0);
 			j++;
 		}
 		i++;
