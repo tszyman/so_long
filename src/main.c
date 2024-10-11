@@ -6,7 +6,7 @@
 /*   By: tszymans <tszymans@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 16:17:55 by tomek             #+#    #+#             */
-/*   Updated: 2024/10/11 15:40:47 by tszymans         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:25:22 by tszymans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static int	initialize_game(t_so_long *so_long, int argc, char *argv[])
 		return (0);
 	if (!init_map(so_long, argc, argv))
 	{
+		cleanup_map(so_long);
 		cleanup_player(so_long);
 		cleanup_display(so_long);
 		return (0);
